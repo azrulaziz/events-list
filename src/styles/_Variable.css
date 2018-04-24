@@ -1,0 +1,35 @@
+:root {
+    --gtc-event: 1fr;
+    --width-event: 300px;
+    --gg-event: 20px;
+    --gtc-evtpage: 1fr;
+    --gg-evtpage: 20px;
+    --img-evt-width: 300px;
+    --img-evt-height: 300px;
+}
+
+@media (min-width: 740px) {
+    :root {
+        --gtc-event: 1fr 1fr;
+        --width-event: 700px;
+        --gg-event: 10px;
+    }
+}
+
+@media (min-width: 840px) {
+    :root {
+    --gtc-evtpage: 1fr 1fr;
+    --gg-evtpage: 0px;
+    --img-evt-width: 450px;
+    --img-evt-height: 400px;
+    }
+}
+
+@media (min-width: 1080px) {
+    :root {
+        --gtc-event: repeat(3, 1fr);
+        --width-event: 1000px;
+        --gtc-evtpage: 1fr 1fr;
+    }
+}
+

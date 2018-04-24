@@ -1,0 +1,21 @@
+.Header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #333;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.Header__logo {
+    padding-left: 15px;
+    font-style: italic;
+}
+
+.Header__nav {
+    justify-self: end;
+    padding-right: 25px;
+}
+
+.Header__logo--link, .Header__nav--link {
+    color: #fff;
+}
