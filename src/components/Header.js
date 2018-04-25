@@ -1,6 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom';
 
+// setup component for the header together with the NavLink used from react-router to handle client-side routing
 const Header = () => {
     return (
         <div className="Header">

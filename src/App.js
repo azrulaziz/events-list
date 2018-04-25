@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import EventDashboard from './components/EventDashboard'
 import EventPage from './components/EventPage'
 
-
+// Setup the route for home page and single event page
 const App = () => (
   <BrowserRouter>
     <div>

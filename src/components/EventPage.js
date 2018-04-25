@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Loader from './Loader';
 
+// api calls for single page of an event
 const url = `https://radiant-garden-47009.herokuapp.com/events`;
 
 class EventPage extends Component {
@@ -14,23 +15,24 @@ class EventPage extends Component {
 
     componentDidMount() {
         this.fetchEvent();
-      }
+    }
     
-      fetchEvent() {
-        fetch(`${url}`)
-        .then(response => response.json())
-        .then(result => this.getEvents(result))
-      }
+    fetchEvent() {
+    fetch(`${url}`)
+    .then(response => response.json())
+    .then(result => this.getEvents(result))
+    }
     
-      getEvents(result) {
-        this.setState({eventList: result})
-      }
+    getEvents(result) {
+    this.setState({eventList: result})
+    }
 
     render() {
         const {eventList} = this.state;
         return (
             <div>
                 {eventList ? 
+                    // filter the event list to look for the event that is clicked based on its id
                 <div className="EventPage">
                     {eventList.filter(evt => evt._id === this.props.match.params.id)
                         .map(evt => {
@@ -55,7 +57,9 @@ class EventPage extends Component {
                             </div>
                         )
                     })} 
-                </div> : <Loader /> }
+                </div> : 
+                // if the data from the API is not yet loaded, run this loader component
+                <Loader /> }
             </div>
         )
     }

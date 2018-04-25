@@ -2,6 +2,7 @@ import React from 'react';
 import Loader from './Loader';
 import {NavLink} from 'react-router-dom';
 
+// setup the component for rendering of each single event 
 const Events = (prop) => {
     return (
         <div>
